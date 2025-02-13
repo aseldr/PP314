@@ -11,23 +11,27 @@ public class UserDTO {
 
     private Long id;
 
-    @NotEmpty(message = "First name should not be empty")
-    @Size(max = 32, message = "First name should be shorter than 32 characters")
+    @NotEmpty(message = "Не должно быть пустым")
+    @Size(max = 32, message = "Не должно быть пустым")
     private String firstname;
 
-    @NotEmpty(message = "Last name should not be empty")
-    @Size(max = 32, message = "Last name should be shorter than 32 characters")
+    @NotEmpty(message = "Не должно быть пустым")
+    @Size(max = 32, message = "Не должно быть пустым")
     private String lastname;
 
-    @NotEmpty(message = "Email should not be empty")
-    @Email(message = "Email should be valid")
+    @NotEmpty(message = "Не должно быть пустым")
+    @Email(message = "Не должно быть пустым")
     private String email;
 
-    @Min(value = 1, message = "Age should be greater than 0")
+    @Min(value = 1, message = "Не должно быть пустым")
     private int age;
 
-    @NotEmpty(message = "Password should not be empty")
+    @NotEmpty(message = "Не должно быть пустым")
     private String userPassword;
+
+    public @Min(value = 1, message = "Не должно быть пустым") int getAge() {
+        return age;
+    }
 
     private List<RoleDTO> roles = new ArrayList<>();
 
@@ -61,10 +65,6 @@ public class UserDTO {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public @Min(value = 1, message = "Age should be greater than 0") int getAge() {
-        return age;
     }
 
     public void setAge(int age) {

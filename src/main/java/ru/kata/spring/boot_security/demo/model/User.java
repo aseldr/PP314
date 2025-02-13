@@ -41,7 +41,7 @@ public class User implements UserDetails {
     @Size(max = 32, message = "Не должно быть пустым")
     private String lastname;
 
-    @Min(value = 0, message = "Age should be greater than 0")
+    @Min(value = 0, message = "Не должно быть пустым")
     private Byte age;
 
     @NotEmpty(message = "Не должно быть пустым")
