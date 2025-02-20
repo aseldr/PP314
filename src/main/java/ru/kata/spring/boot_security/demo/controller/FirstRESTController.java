@@ -71,7 +71,7 @@ public class FirstRESTController {
         }
     }
 
-    @GetMapping("/admin")
+    @GetMapping("/users")
     public ResponseEntity<List<UserDTO>> getUserList() {
         List<UserDTO> users = userService.getAllUsers().stream()
                 .map(this::convertToUserDTO)
